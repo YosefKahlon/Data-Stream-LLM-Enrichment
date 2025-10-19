@@ -13,7 +13,7 @@ class MessageProcessor:
 
         Args:
             llm_client: LLM provider for making inference requests
-            validator: Optional validator for LLM responses (injected for testability)
+            validator: validator for LLM responses (injected for testability)
         """
         self.llm_client = llm_client
         self.validator = validator or LLMResponseValidator()

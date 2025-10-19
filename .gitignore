@@ -1,0 +1,7 @@
+# Ignore Python cache directories and files
+__pycache__/
+*.pyc
+data/
+output/
+.idea/
+.vscode/

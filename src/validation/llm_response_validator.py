@@ -9,7 +9,6 @@ class LLMResponseValidator:
 
     def __init__(self, description_word_limit: int = 25) -> None:
         self.description_word_limit = description_word_limit
-        # Precompile simple email regex for performance
         self._email_pattern = re.compile(r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$')
 
     def validate(self, llm_response: dict) -> ValidatedLLMResponse:

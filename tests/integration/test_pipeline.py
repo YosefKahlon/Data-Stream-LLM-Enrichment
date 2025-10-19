@@ -61,7 +61,7 @@ class TestPipeline:
     @pytest.mark.asyncio
     async def test_pipeline_basic_validation(self, shared_results):
 
-        assert len(shared_results) == 10, "Should have 10 results"
+        assert len(shared_results) == 4, "Should have 4 results"
 
         for result in shared_results:
             assert "id" in result

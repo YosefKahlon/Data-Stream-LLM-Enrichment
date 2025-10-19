@@ -19,15 +19,17 @@ class Config:
         int(code.strip()) for code in os.getenv("RETRY_STATUS_CODES", "429,500,502,503,504").split(",") if code.strip()
     )
 
-    # Concurrency settings
-    MAX_CONCURRENCY = int(os.getenv("MAX_CONCURRENCY", "1"))
-
-    # File paths and queue settings
-    INPUT_PATH = os.getenv("INPUT_PATH", str(Path(__file__).parent.parent / "data" / "dev_emails_150.json"))
-    OUTPUT_PATH = os.getenv("OUTPUT_PATH", str(Path(__file__).parent.parent / "output" / "results.json"))
 
     # Queue settings
-    QUEUE_TYPE = os.getenv("QUEUE_TYPE", "memory")  # Options: memory, rabbitmq
+    QUEUE_TYPE = os.getenv("QUEUE_TYPE", "memory")  # Options: memory, kafka, rabbitmq
+    MEMORY_QUEUE_MAX_SIZE = int(os.getenv("MEMORY_QUEUE_MAX_SIZE", "0"))  # 0 = unlimited
+    
+
+
+    # File paths
+    INPUT_PATH = os.getenv("INPUT_PATH", str(Path(__file__).parent.parent / "data" / "dev_emails_150.json"))
+    OUTPUT_PATH = os.getenv("OUTPUT_PATH", str(Path(__file__).parent.parent / "output" / "results.json"))
+    
 
 
 config = Config()

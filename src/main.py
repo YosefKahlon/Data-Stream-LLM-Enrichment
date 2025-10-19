@@ -13,8 +13,9 @@ async def pipeline():
     1. Initialize application components
     2. Load input dataset
     3. Enqueue messages (with idempotency)
-    4. Process messages concurrently
+    4. Process messages from queue with single worker
     5. Write results and report metrics
+    6. Clean up resources
     """
     app = EnrichmentApplication(config)
     await app.initialize_components()

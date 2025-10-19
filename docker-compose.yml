@@ -7,27 +7,15 @@ services:
     volumes:
       - ollama_data:/root/.ollama
 
-#  app:
-#    build:
-#      context: .
-#      dockerfile: Dockerfile
-#    container_name: enrichment_app
-#    depends_on:
-#      - ollama
-#    environment:
-#      - LLM_URL=http://ollama:11434
-#      - MODEL_NAME=llama3:latest
-#      - INPUT_PATH=/app/data/dev_emails_150.json
-#      - OUTPUT_PATH=/app/output/results.json
-#      - FAILURES_PATH=/app/output/failures.json
-#      - QUEUE_TYPE=memory
-#      - MAX_CONCURRENCY=1
-#      - TIMEOUT_S=60
-#      - RETRIES=3
-#    volumes:
-#      - ./data:/app/data:ro
-#      - ./output:/app/output
-#    restart: on-failure
+  llm-enrichment:
+     build: .
+     depends_on:
+       - ollama
+     environment:
+       - LLM_URL=http://ollama:11434
+     volumes:
+       - ./data:/app/data
+       - ./output:/app/output
 
 volumes:
   ollama_data:

@@ -1,17 +1,15 @@
 from typing import List, Optional
-import asyncio
 import time
 import json
 from pathlib import Path
-
 from src.config import logger, Config
 from src.models import Message
-from src.queues import MessageQueue, InMemoryQueue
+from src.queues import MessageQueue, QueueFactory
 from src.llm.client import LLMClient
 from src.llm import LLMProvider
 from src.processors.message_processor import MessageProcessor
 from src.workers.worker import Worker
-from src.output_writer import ResultWriter, ResultWriterInterface
+from src.handlers import OutputFileHandler
 
 
 class EnrichmentApplication:
@@ -19,28 +17,28 @@ class EnrichmentApplication:
     Main application class that orchestrates the LLM enrichment pipeline.
     
     Responsibilities:
-    - Initialize and manage pipeline components (queue, LLM client, workers, etc.)
+    - Initialize and manage pipeline components (queue, LLM client, processor, etc.)
     - Load input dataset
     - Enqueue messages with idempotency support
-    - Coordinate concurrent message processing
+    - Process messages 
     - Write results and report metrics
     """
-    
+
     def __init__(self, config: Config):
         self.config = config
         self.logger = logger
         self.queue: Optional[MessageQueue] = None
         self.llm_client: Optional[LLMProvider] = None
         self.processor: Optional[MessageProcessor] = None
-        self.workers: List[Worker] = []
-        self.output_writer: Optional[ResultWriterInterface] = None
+        self.worker: Optional[Worker] = None
+        self.result_handler: Optional[OutputFileHandler] = None
 
     async def initialize_components(self) -> None:
         """Initialize all components needed for processing."""
         self.logger.info("Initializing components...")
-        
-        self.queue = await self._create_queue()
-        
+
+        self.queue = await QueueFactory.create_queue(self.config)
+
         # Create LLM client
         self.llm_client = LLMClient(
             base_url=self.config.LLM_URL,
@@ -53,32 +51,24 @@ class EnrichmentApplication:
             f"backoff_max_s={self.config.RETRY_BACKOFF_MAX_S}, jitter_s={self.config.RETRY_JITTER_S}, "
             f"retry_status_codes={self.config.RETRY_STATUS_CODES}"
         )
-        
+
         # Health check LLM service
         if not self.llm_client.health_check():
             self.logger.error("LLM service health check failed")
             raise RuntimeError("LLM service is not available. Please ensure Ollama is running.")
-        
+
         self.processor = MessageProcessor(self.llm_client)
-        
-        num_workers = self.config.MAX_CONCURRENCY
-        self.logger.info(f"Creating {num_workers} concurrent workers...")
-        self.workers = []
-        for i in range(num_workers):
-            worker = Worker(worker_id=(i + 1), queue=self.queue, processor=self.processor)
-            self.workers.append(worker)
 
-        # Create output writer
-        self.output_writer = ResultWriter(self.config.OUTPUT_PATH)
-        
+        # Create and initialize result handler
+        self.result_handler = OutputFileHandler(self.config.OUTPUT_PATH)
+
+        # Create single worker
+        self.worker = Worker(
+            queue=self.queue,
+            processor=self.processor,
+        )
+
         self.logger.info("All components initialized successfully")
-
-    async def _create_queue(self) -> MessageQueue:
-        """Create and configure message queue based on configuration."""
-        if self.config.QUEUE_TYPE == "memory":
-            return InMemoryQueue()
-        else:
-            raise ValueError(f"Unsupported queue type: {self.config.QUEUE_TYPE}")
 
     async def load_dataset(self, dataset_path: str) -> List[Message]:
         """
@@ -142,70 +132,18 @@ class EnrichmentApplication:
             self.logger.error(f"Failed to load dataset: {e}")
             raise
 
-    def _load_processed_ids(self) -> set[int]:
-        """
-        Load set of already-processed message IDs from output file.
-        
-        Implements idempotency by reading existing results and extracting
-        IDs of successfully completed messages. This allows the pipeline
-        to safely restart after crashes without re-processing messages.
-        
-        Returns:
-            Set of message IDs that have been successfully processed.
-            Returns empty set if file doesn't exist or can't be parsed.
-        """
-        output_path = Path(self.config.OUTPUT_PATH)
-        
-        # Return empty set if output file doesn't exist yet
-        if not output_path.exists():
-            self.logger.debug("Output file does not exist yet - no messages processed")
-            return set()
-        
-        try:
-            with open(output_path, 'r', encoding='utf-8') as f:
-                results = json.load(f)
-            
-            # Extract IDs of successfully processed messages only
-            processed_ids = {
-                r['id'] for r in results 
-                if isinstance(r, dict) and r.get('success') is True
-            }
-            
-            self.logger.info(f"Found {len(processed_ids)} already processed messages")
-            return processed_ids
-            
-        except json.JSONDecodeError as e:
-            self.logger.warning(f"Could not parse output file (corrupted JSON): {e}")
-            self.logger.warning("Treating all messages as new")
-            return set()
-        except Exception as e:
-            self.logger.warning(f"Could not load processed IDs: {e}")
-            self.logger.warning("Treating all messages as new")
-            return set()
-
     async def enqueue_messages(self, messages: List[Message]) -> None:
         """
-        Enqueue messages for processing, skipping already processed ones.
-        
-        Implements idempotency by checking existing results before enqueueing.
-        Messages that have already been successfully processed are skipped.
-        
+        Enqueue messages for processing.
+
         Args:
             messages: List of Message objects to enqueue
         """
         self.logger.info(f"Enqueueing {len(messages)} messages...")
 
-        # Load already processed message IDs for idempotency
-        processed_ids = self._load_processed_ids()
-
         enqueued_count = 0
-        skipped_count = 0
 
         for message in messages:
-            # Skip if already successfully processed
-            if message.id in processed_ids:
-                skipped_count += 1
-                continue
 
             try:
                 await self.queue.enqueue(message)
@@ -213,66 +151,52 @@ class EnrichmentApplication:
             except Exception as e:
                 self.logger.error(f"Failed to enqueue message {message.id}: {e}")
 
-        self.logger.info(f"Enqueued {enqueued_count} messages, skipped {skipped_count} already processed")
+        self.logger.info(f"Enqueued {enqueued_count} messages for processing")
 
     async def start_processing(self) -> None:
         """
-        Start processing messages from the queue with concurrent workers.
+        Start processing messages from the queue with streaming results.
         
         This method:
-        1. Launches all workers concurrently
-        2. Waits for all workers to complete
-        3. Collects and sorts results
-        4. Writes results to output file
-        5. Reports performance metrics
+        1. Starts the worker to process messages from the queue
+        2. Waits for worker to complete all messages
+        3. Saves results to file
+        4. Reports performance metrics
+        
         """
-        num_workers = len(self.workers)
-        self.logger.info(f"Starting message processing with {num_workers} concurrent workers...")
-        
-        # Start timing
-        start_time = time.time()
-        
-        # Start all workers concurrently
-        tasks = []
-        for worker in self.workers:
-            task = asyncio.create_task(worker.process_all())
-            tasks.append(task)
-        worker_results = await asyncio.gather(*tasks)
+        self.logger.info(f"Starting message processing ...")
 
-        # End timing
+        start_time = time.time()
+
+        results = await self.worker.process_all()
+
         end_time = time.time()
         elapsed_time = end_time - start_time
-        
-        # Combine results from all workers
-        all_results = []
-        for results in worker_results:
-            all_results.extend(results)
-        
-        # Sort results by message ID for consistent output
-        all_results.sort(key=lambda r: r.id)
-        
-        # Write results to output file
-        self.output_writer.write(all_results)
-        
-        # Print summary
-        success_count = sum(1 for r in all_results if r.success)
-        failure_count = len(all_results) - success_count
-        
+
+        # Save results to file 
+        self.logger.info("Saving results to file...")
+        save_start = time.time()
+        await self.result_handler.write(results)
+        save_time = time.time() - save_start
+        self.logger.info(f"Results saved in {save_time:.2f} seconds")
+
         # Calculate performance metrics
-        messages_per_second = len(all_results) / elapsed_time if elapsed_time > 0 else 0
-        avg_time_per_message = elapsed_time / len(all_results) if all_results else 0
-        
+        success_count = sum(1 for r in results if r.success)
+        failure_count = len(results) - success_count
+        messages_per_second = len(results) / elapsed_time if elapsed_time > 0 else 0
+        avg_time_per_message = elapsed_time / len(results) if results else 0
+
         self.logger.info("=" * 70)
         self.logger.info("PROCESSING COMPLETE")
         self.logger.info("=" * 70)
-        self.logger.info(f"Total messages: {len(all_results)}")
+        self.logger.info(f"Total messages: {len(results)}")
         self.logger.info(f"Successful: {success_count}")
         self.logger.info(f"Failed: {failure_count}")
-        self.logger.info(f"Workers used: {num_workers}")
+        self.logger.info(f"Processing mode: Single worker with streaming results")
         self.logger.info("-" * 70)
-        self.logger.info(f"Total time: {elapsed_time:.2f} seconds ({elapsed_time/60:.2f} minutes)")
+        self.logger.info(f"Total time: {elapsed_time:.2f} seconds ({elapsed_time / 60:.2f} minutes)")
         self.logger.info(f"Average time per message: {avg_time_per_message:.2f} seconds")
         self.logger.info(f"Throughput: {messages_per_second:.2f} messages/second")
         self.logger.info("-" * 70)
-        self.logger.info(f"Results saved to: {self.config.OUTPUT_PATH}")
+        self.logger.info(f"Results streamed to: {self.config.OUTPUT_PATH}")
         self.logger.info("=" * 70)

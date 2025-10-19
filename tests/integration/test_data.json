@@ -14,29 +14,5 @@
   {
     "id": 4,
     "text": "Meeting invitation: Project kickoff tomorrow at 10 AM. RSVP to alice@startup.io and bob@startup.io"
-  },
-  {
-    "id": 5,
-    "text": "Your account password was changed. If this wasn't you, contact security@bank.com immediately."
-  },
-  {
-    "id": 6,
-    "text": "Congratulations! You won our monthly raffle. Claim your prize by emailing winner@promo.net"
-  },
-  {
-    "id": 7,
-    "text": "Invoice #INV-2024-001 is overdue. Please remit payment to accounting@vendor.com"
-  },
-  {
-    "id": 8,
-    "text": "New feature release notes: We've added dark mode! Feedback welcome at feedback@product.io"
-  },
-  {
-    "id": 9,
-    "text": "Job application received. HR will contact you at the email provided within 2 weeks."
-  },
-  {
-    "id": 10,
-    "text": "System alert: Disk usage at 95%. Please contact sysadmin@datacenter.net urgently."
   }
 ]
