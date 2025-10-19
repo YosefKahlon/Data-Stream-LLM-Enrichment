@@ -1,0 +1,27 @@
+# Core dependencies for LLM enrichment pipeline
+pydantic>=2.5.0
+requests>=2.31.0
+pydantic-settings>=2.1.0
+
+# Async support
+aiohttp>=3.9.0
+asyncio-throttle>=1.0.0
+
+# Data validation and processing
+python-dateutil>=2.8.0
+
+# Development and testing
+pytest>=7.4.0
+pytest-asyncio>=1.2.0
+pytest-mock>=3.12.0
+
+# Type checking and formatting
+mypy>=1.8.0
+black>=23.12.0
+isort>=5.13.0
+
+# Production monitoring
+structlog>=23.2.0
+
+# Retry utility
+tenacity>=8.0.0
