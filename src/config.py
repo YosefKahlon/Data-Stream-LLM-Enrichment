@@ -10,7 +10,7 @@ class Config:
     TIMEOUT_S = int(os.getenv("TIMEOUT_S", "60"))
 
     # Retry configuration
-    RETRIES = int(os.getenv("RETRIES", "3"))
+    RETRIES = int(os.getenv("RETRIES", "5"))
     RETRY_BACKOFF_BASE_S = float(os.getenv("RETRY_BACKOFF_BASE_S", "1.0"))
     RETRY_BACKOFF_MAX_S = float(os.getenv("RETRY_BACKOFF_MAX_S", "30.0"))
     RETRY_JITTER_S = float(os.getenv("RETRY_JITTER_S", "0.25"))
