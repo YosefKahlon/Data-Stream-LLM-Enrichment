@@ -192,7 +192,6 @@ class EnrichmentApplication:
         self.logger.info(f"Total messages: {len(results)}")
         self.logger.info(f"Successful: {success_count}")
         self.logger.info(f"Failed: {failure_count}")
-        self.logger.info(f"Processing mode: Single worker with streaming results")
         self.logger.info("-" * 70)
         self.logger.info(f"Total time: {elapsed_time:.2f} seconds ({elapsed_time / 60:.2f} minutes)")
         self.logger.info(f"Average time per message: {avg_time_per_message:.2f} seconds")

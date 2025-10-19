@@ -1,0 +1,1122 @@
+[
+  {
+    "id": 310005,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes notification with action items.",
+    "emails": []
+  },
+  {
+    "id": 310146,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310094,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs. Review details and follow usual process.",
+    "emails": []
+  },
+  {
+    "id": 310135,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs.",
+    "emails": []
+  },
+  {
+    "id": 310012,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required",
+    "emails": []
+  },
+  {
+    "id": 310129,
+    "success": true,
+    "category": "internal",
+    "description": "Reminder about security training and available resources",
+    "emails": []
+  },
+  {
+    "id": 310020,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310044,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started with a process, including a zero-width email example.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310006,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs meeting invitation with action items and portal link",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310022,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected; brief summary and next steps.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310080,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with action items",
+    "emails": []
+  },
+  {
+    "id": 310066,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs with next steps.",
+    "emails": []
+  },
+  {
+    "id": 310072,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with portal link and action items",
+    "emails": []
+  },
+  {
+    "id": 310103,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required; no sensitive info to share.",
+    "emails": []
+  },
+  {
+    "id": 310131,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected; brief summary and next steps provided.",
+    "emails": []
+  },
+  {
+    "id": 310113,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected, review details and follow usual process.",
+    "emails": [
+      "user@domain.com"
+    ]
+  },
+  {
+    "id": 310106,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected, with action items listed.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310108,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notice with summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310052,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly feature roundup with action items and summary.",
+    "emails": []
+  },
+  {
+    "id": 310041,
+    "success": true,
+    "category": "internal",
+    "description": "Password review request with no sensitive information sharing.",
+    "emails": []
+  },
+  {
+    "id": 310018,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with instructions for clarification.",
+    "emails": []
+  },
+  {
+    "id": 310092,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes",
+    "emails": []
+  },
+  {
+    "id": 310123,
+    "success": true,
+    "category": "internal",
+    "description": "Request for password review with instructions.",
+    "emails": []
+  },
+  {
+    "id": 310100,
+    "success": true,
+    "category": "phishing",
+    "description": "Urgent account action required, do not share sensitive info",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310042,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly summary of feature updates with action items",
+    "emails": []
+  },
+  {
+    "id": 310043,
+    "success": true,
+    "category": "internal",
+    "description": "Password review request with instructions for clarification",
+    "emails": []
+  },
+  {
+    "id": 310057,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes notification with international contact info",
+    "emails": []
+  },
+  {
+    "id": 310060,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster, with instructions to review and follow a process.",
+    "emails": []
+  },
+  {
+    "id": 310093,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started, no sensitive info sharing in replies.",
+    "emails": []
+  },
+  {
+    "id": 310147,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights with instructions to review and follow up.",
+    "emails": []
+  },
+  {
+    "id": 310009,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310117,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310056,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster, including a brief summary and next steps.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310109,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes notification",
+    "emails": []
+  },
+  {
+    "id": 310085,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected.",
+    "emails": []
+  },
+  {
+    "id": 310124,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes.",
+    "emails": []
+  },
+  {
+    "id": 310084,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly roundup of new features",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310010,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly summary of new features, with ticketing system for questions.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310145,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310096,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with instructions on asking questions and sharing sensitive information.",
+    "emails": []
+  },
+  {
+    "id": 310028,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action request with instructions to review and follow usual process.",
+    "emails": []
+  },
+  {
+    "id": 310059,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected; review details and follow usual process",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310021,
+    "success": true,
+    "category": "internal",
+    "description": "Password review request with brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310019,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected, no sensitive info to share.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310122,
+    "success": true,
+    "category": "internal",
+    "description": "Notification about upcoming webinar and release notes.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310087,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights notification",
+    "emails": []
+  },
+  {
+    "id": 310107,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected; review details and follow usual process.",
+    "emails": []
+  },
+  {
+    "id": 310133,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights with action items and international contact information.",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310047,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with guidance on seeking clarification.",
+    "emails": []
+  },
+  {
+    "id": 310000,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected. Do not share sensitive info.",
+    "emails": []
+  },
+  {
+    "id": 310138,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with portal link and guidelines.",
+    "emails": []
+  },
+  {
+    "id": 310073,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes notification with a zero-width email example.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310099,
+    "success": true,
+    "category": "phishing",
+    "description": "Urgent account action required, see portal for info and timelines",
+    "emails": []
+  },
+  {
+    "id": 310058,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product updates for internal use only.",
+    "emails": []
+  },
+  {
+    "id": 310143,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights with action items and international contact information.",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310033,
+    "success": true,
+    "category": "phishing",
+    "description": "Urgent account action required. Invalid email observed.",
+    "emails": []
+  },
+  {
+    "id": 310029,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs with action items listed",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310046,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action request with no specific details provided.",
+    "emails": []
+  },
+  {
+    "id": 310105,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly summary of new features and action items.",
+    "emails": []
+  },
+  {
+    "id": 310035,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes",
+    "emails": []
+  },
+  {
+    "id": 310110,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required for company internal matters.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310144,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required; see portal for info and timelines.",
+    "emails": []
+  },
+  {
+    "id": 310026,
+    "success": true,
+    "category": "internal",
+    "description": "Security training reminder with no sensitive info to share.",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310048,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected; no sensitive info should be shared.",
+    "emails": []
+  },
+  {
+    "id": 310127,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification.",
+    "emails": []
+  },
+  {
+    "id": 310091,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes notification with ticketing system instructions.",
+    "emails": []
+  },
+  {
+    "id": 310034,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window and changes notification with next steps.",
+    "emails": []
+  },
+  {
+    "id": 310134,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310037,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster.",
+    "emails": []
+  },
+  {
+    "id": 310076,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights notification",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310051,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required, no sensitive info to share",
+    "emails": [
+      "user@example.ru"
+    ]
+  },
+  {
+    "id": 310036,
+    "success": true,
+    "category": "internal",
+    "description": "Internal team offsite logistics and action items.",
+    "emails": []
+  },
+  {
+    "id": 310031,
+    "success": true,
+    "category": "phishing",
+    "description": "Urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310075,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs update",
+    "emails": []
+  },
+  {
+    "id": 310011,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310125,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with action items and instructions on how to ask questions.",
+    "emails": []
+  },
+  {
+    "id": 310120,
+    "success": true,
+    "category": "internal",
+    "description": "Internal newsletter with product highlights",
+    "emails": []
+  },
+  {
+    "id": 310027,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs. Review details and follow process.",
+    "emails": []
+  },
+  {
+    "id": 310089,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly summary of new features with portal link",
+    "emails": []
+  },
+  {
+    "id": 310017,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required; review details and follow usual process.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310136,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310064,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs with instructions on using the ticketing system.",
+    "emails": []
+  },
+  {
+    "id": 310132,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes with instructions on how to ask questions and access additional information.",
+    "emails": []
+  },
+  {
+    "id": 310077,
+    "success": true,
+    "category": "internal",
+    "description": "Security training reminder with no sensitive info sharing allowed.",
+    "emails": []
+  },
+  {
+    "id": 310088,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster.",
+    "emails": []
+  },
+  {
+    "id": 310016,
+    "success": true,
+    "category": "internal",
+    "description": "Product highlights for internal use.",
+    "emails": []
+  },
+  {
+    "id": 310045,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with action items",
+    "emails": []
+  },
+  {
+    "id": 310101,
+    "success": true,
+    "category": "internal",
+    "description": "Internal email about payroll configuration discrepancy.",
+    "emails": []
+  },
+  {
+    "id": 310014,
+    "success": true,
+    "category": "newsletter",
+    "description": "Quarterly roundup of new features.",
+    "emails": []
+  },
+  {
+    "id": 310116,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster with details to follow",
+    "emails": []
+  },
+  {
+    "id": 310053,
+    "success": true,
+    "category": "internal",
+    "description": "Immediate password review requested by organization.",
+    "emails": []
+  },
+  {
+    "id": 310003,
+    "success": true,
+    "category": "internal",
+    "description": "Team offsite logistics with action items",
+    "emails": []
+  },
+  {
+    "id": 310015,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with instructions.",
+    "emails": []
+  },
+  {
+    "id": 310008,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly roundup of new features with summary and next steps",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310114,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product updates with action items and support request process.",
+    "emails": []
+  },
+  {
+    "id": 310063,
+    "success": true,
+    "category": "internal",
+    "description": "Product highlights and internal contact information",
+    "emails": []
+  },
+  {
+    "id": 310002,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster. Brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310097,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started with no sensitive information sharing",
+    "emails": []
+  },
+  {
+    "id": 310065,
+    "success": true,
+    "category": "internal",
+    "description": "Security training reminder with action items and ticketing system details.",
+    "emails": []
+  },
+  {
+    "id": 310149,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes announcement",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310142,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with ticketing system instructions",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310039,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs. Ticketing system for questions.",
+    "emails": []
+  },
+  {
+    "id": 310090,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected, with mention of invalid email address.",
+    "emails": []
+  },
+  {
+    "id": 310067,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product updates with action items",
+    "emails": []
+  },
+  {
+    "id": 310104,
+    "success": true,
+    "category": "internal",
+    "description": "Team offsite logistics notification with brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310115,
+    "success": true,
+    "category": "internal",
+    "description": "Security training reminder with details on the portal.",
+    "emails": [
+      "user@company.com"
+    ]
+  },
+  {
+    "id": 310007,
+    "success": true,
+    "category": "internal",
+    "description": "Request to review passwords with portal information and support",
+    "emails": []
+  },
+  {
+    "id": 310061,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected; use ticketing system if unsure.",
+    "emails": []
+  },
+  {
+    "id": 310069,
+    "success": true,
+    "category": "internal",
+    "description": "Password review request with action items and international contact information.",
+    "emails": []
+  },
+  {
+    "id": 310121,
+    "success": true,
+    "category": "internal",
+    "description": "Internal notification about urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310040,
+    "success": true,
+    "category": "phishing",
+    "description": "Immediate password review requested.",
+    "emails": []
+  },
+  {
+    "id": 310119,
+    "success": true,
+    "category": "internal",
+    "description": "Maintenance window announcement with no sensitive information sharing.",
+    "emails": []
+  },
+  {
+    "id": 310070,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster.",
+    "emails": []
+  },
+  {
+    "id": 310049,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310023,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly roundup of new features with brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310139,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required; no sensitive info shared",
+    "emails": []
+  },
+  {
+    "id": 310081,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs, with action items and portal link.",
+    "emails": []
+  },
+  {
+    "id": 310126,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes with international contact info.",
+    "emails": []
+  },
+  {
+    "id": 310111,
+    "success": true,
+    "category": "internal",
+    "description": "Internal team offsite logistics",
+    "emails": []
+  },
+  {
+    "id": 310071,
+    "success": true,
+    "category": "internal",
+    "description": "Notification about payroll configuration issue with portal information and process instructions.",
+    "emails": []
+  },
+  {
+    "id": 310082,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected; no sensitive info to share.",
+    "emails": []
+  },
+  {
+    "id": 310024,
+    "success": true,
+    "category": "internal",
+    "description": "Immediate password review requested.",
+    "emails": []
+  },
+  {
+    "id": 310032,
+    "success": true,
+    "category": "internal",
+    "description": "Tips for getting started faster with a brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310074,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required.",
+    "emails": []
+  },
+  {
+    "id": 310098,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product highlights with next steps",
+    "emails": [
+      "ask.questions@ticketingsystem.com"
+    ]
+  },
+  {
+    "id": 310086,
+    "success": true,
+    "category": "internal",
+    "description": "Notice about payroll configuration discrepancy with next steps.",
+    "emails": []
+  },
+  {
+    "id": 310140,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly roundup of new features, with details and timeline info.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310128,
+    "success": true,
+    "category": "internal",
+    "description": "Product highlights notification with portal info and timeline.",
+    "emails": []
+  },
+  {
+    "id": 310102,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required. No sensitive information should be shared.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310095,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs update with action items and timeline information.",
+    "emails": [
+      "benutzer@muenich.de"
+    ]
+  },
+  {
+    "id": 310112,
+    "success": true,
+    "category": "internal",
+    "description": "Weekly product updates.",
+    "emails": []
+  },
+  {
+    "id": 310141,
+    "success": true,
+    "category": "newsletter",
+    "description": "Weekly product highlights and review instructions.",
+    "emails": []
+  },
+  {
+    "id": 310079,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy with summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310078,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes. See the portal for more information and timelines.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310054,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes.",
+    "emails": []
+  },
+  {
+    "id": 310148,
+    "success": true,
+    "category": "internal",
+    "description": "Reminder for security training with instructions on how to ask questions",
+    "emails": []
+  },
+  {
+    "id": 310050,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with instructions to clarify via ticketing system.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310030,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected; review details and follow usual process",
+    "emails": [
+      "support@example.com"
+    ]
+  },
+  {
+    "id": 310038,
+    "success": true,
+    "category": "internal",
+    "description": "Upcoming webinar and release notes notification",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310062,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected",
+    "emails": []
+  },
+  {
+    "id": 310130,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification",
+    "emails": []
+  },
+  {
+    "id": 310137,
+    "success": true,
+    "category": "internal",
+    "description": "Password review request with summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310013,
+    "success": true,
+    "category": "internal",
+    "description": "Notice about payroll configuration discrepancy with action items.",
+    "emails": []
+  },
+  {
+    "id": 310118,
+    "success": true,
+    "category": "internal",
+    "description": "Urgent account action required. No sensitive information should be shared in replies.",
+    "emails": [
+      "it@company.com"
+    ]
+  },
+  {
+    "id": 310068,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly planning and OKRs notification with brief summary and next steps.",
+    "emails": []
+  },
+  {
+    "id": 310004,
+    "success": true,
+    "category": "internal",
+    "description": "Suspicious sign-in detected.",
+    "emails": []
+  },
+  {
+    "id": 310001,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notice with instructions on how to ask questions.",
+    "emails": []
+  },
+  {
+    "id": 310055,
+    "success": true,
+    "category": "phishing",
+    "description": "Suspicious sign-in detected, invalid email observed",
+    "emails": []
+  },
+  {
+    "id": 310025,
+    "success": true,
+    "category": "internal",
+    "description": "Payroll configuration discrepancy notification with brief summary and next steps",
+    "emails": []
+  },
+  {
+    "id": 310083,
+    "success": true,
+    "category": "internal",
+    "description": "Quarterly roundup of new features.",
+    "emails": [
+      "it@company.com"
+    ]
+  }
+]
